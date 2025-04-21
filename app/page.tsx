@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-black to-gray-900 text-white">
+      <section className="relative pt-32 pb-20 bg-gradient-to-r from-black to-gray-900 text-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col items-center justify-center text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">ChainCrafters</h1>
