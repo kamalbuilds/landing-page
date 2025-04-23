@@ -42,6 +42,20 @@ const slideIn = {
   }
 };
 
+// Adding horizontal slide animation
+const slideInFromLeft = {
+  hidden: { x: -100, opacity: 0 },
+  visible: { 
+    x: 0, 
+    opacity: 1,
+    transition: { 
+      type: "spring",
+      stiffness: 80,
+      damping: 15
+    }
+  }
+};
+
 const scaleUp = {
   hidden: { scale: 0.8, opacity: 0 },
   visible: {
@@ -361,7 +375,7 @@ export default function Home() {
             {/* TradeSphere */}
             <motion.div 
               className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
-              variants={fadeIn}
+              variants={slideInFromLeft}
               whileHover={{ y: -10 }}
             >
               <div className="h-48 bg-gradient-to-br from-blue-900 to-indigo-900 flex items-center justify-center">
@@ -389,7 +403,7 @@ export default function Home() {
             {/* Gas Protocol */}
             <motion.div 
               className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
-              variants={fadeIn}
+              variants={slideInFromLeft}
               whileHover={{ y: -10 }}
             >
               <div className="h-48 bg-gradient-to-br from-indigo-900 to-purple-900 flex items-center justify-center">
@@ -417,7 +431,7 @@ export default function Home() {
             {/* XChain Investments */}
             <motion.div 
               className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
-              variants={fadeIn}
+              variants={slideInFromLeft}
               whileHover={{ y: -10 }}
             >
               <div className="h-48 bg-gradient-to-br from-purple-900 to-blue-900 flex items-center justify-center">
@@ -433,6 +447,118 @@ export default function Home() {
                 </div>
                 <a 
                   href="https://ethglobal.com/showcase/xchain-investments-4fu2t" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-blue-400 hover:text-blue-300 transition"
+                >
+                  View Project →
+                </a>
+              </div>
+            </motion.div>
+
+            {/* AVA AI Agent */}
+            <motion.div 
+              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              variants={slideInFromLeft}
+              whileHover={{ y: -10 }}
+            >
+              <div className="h-48 bg-gradient-to-br from-green-900 to-blue-900 flex items-center justify-center">
+                <span className="text-2xl font-bold">AVA AI Agent</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">AVA AI Agent</h3>
+                <p className="mb-4">Multi-chain AI agent supporting Base, Mantle, Sui, and Arbitrum networks.</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Solidity</span>
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">AI</span>
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Multi-chain</span>
+                </div>
+                <a 
+                  href="https://github.com/kamalbuilds/ava-the-ai-agent" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-blue-400 hover:text-blue-300 transition"
+                >
+                  View Project →
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Sonic Predict */}
+            <motion.div 
+              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              variants={slideInFromLeft}
+              whileHover={{ y: -10 }}
+            >
+              <div className="h-48 bg-gradient-to-br from-pink-900 to-indigo-900 flex items-center justify-center">
+                <span className="text-2xl font-bold">Sonic Predict</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">Sonic Predict</h3>
+                <p className="mb-4">Prediction market platform built on Sonic protocols enabling decentralized forecasting.</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Sonic</span>
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">DeFi</span>
+                </div>
+                <a 
+                  href="https://github.com/kamalbuilds/SonicPredict" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-blue-400 hover:text-blue-300 transition"
+                >
+                  View Project →
+                </a>
+              </div>
+            </motion.div>
+
+            {/* NEAR Multichain AI Agent */}
+            <motion.div 
+              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              variants={slideInFromLeft}
+              whileHover={{ y: -10 }}
+            >
+              <div className="h-48 bg-gradient-to-br from-blue-900 to-cyan-900 flex items-center justify-center">
+                <span className="text-2xl font-bold">NEAR Multichain AI</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">NEAR Multichain AI Agent</h3>
+                <p className="mb-4">AI-powered agent for NEAR Protocol with cross-chain capabilities.</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">NEAR</span>
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">AI</span>
+                </div>
+                <a 
+                  href="https://github.com/kamalbuilds/near-multichain-ai-agent" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-blue-400 hover:text-blue-300 transition"
+                >
+                  View Project →
+                </a>
+              </div>
+            </motion.div>
+
+            {/* SUI Gas Futures */}
+            <motion.div 
+              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              variants={slideInFromLeft}
+              whileHover={{ y: -10 }}
+            >
+              <div className="h-48 bg-gradient-to-br from-teal-900 to-blue-900 flex items-center justify-center">
+                <span className="text-2xl font-bold">SUI Gas Futures</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">SUI Gas Futures</h3>
+                <p className="mb-4">Derivative contracts for SUI blockchain gas prices, enabling hedging against volatility.</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">SUI</span>
+                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Derivatives</span>
+                </div>
+                <a 
+                  href="https://github.com/kamalbuilds/sui-gas-futures" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-blue-400 hover:text-blue-300 transition"
