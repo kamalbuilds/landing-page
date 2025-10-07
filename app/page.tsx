@@ -304,7 +304,7 @@ export default function Home() {
                 <a href="https://github.com/kamalbuilds" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="https://twitter.com/0xkamal7" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+                <a href="https://x.com/kamalbuilds" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
                   <Twitter className="w-6 h-6" />
                 </a>
               </motion.div>
