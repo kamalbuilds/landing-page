@@ -5,7 +5,7 @@ import { Navbar } from "../components/ui/navbar"
 
 export const metadata = {
   title: "ChainCrafters - Blockchain Development Company",
-  description: "Building innovative blockchain solutions that scale and improve users' lives.",
+  description: "Building innovative blockchain solutions that scale and improve users lives.",
 }
 
 export default function RootLayout({
