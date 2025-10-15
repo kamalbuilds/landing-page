@@ -54,7 +54,8 @@ export const projects = [
     technologies: ["Ethereum", "React", "Solidity"],
     link: "https://ethglobal.com/showcase/tradesphere-5vdrw",
     gradient: "from-blue-900/80 to-indigo-900/80",
-    techColor: "blue"
+    techColor: "blue",
+    image: "https://images.unsplash.com/photo-1620712948891-91491979690a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWluJTIwZmluYW5jZSUyMGRpYWdyYW18ZW58MHx8fHwxNzE5OTQ1NjAwfDA&ixlib=rb-4.0.3&q=80&w=1080"
   },
   {
     title: "Gas Protocol",
@@ -62,7 +63,8 @@ export const projects = [
     technologies: ["TypeScript", "Account Abstraction", "Web3"],
     link: "https://ethglobal.com/showcase/gas-protocol-46m74",
     gradient: "from-indigo-900/80 to-purple-900/80",
-    techColor: "purple"
+    techColor: "purple",
+    image: "https://private-user-images.githubusercontent.com/95926324/277536549-c977a736-8287-4cf0-a0a9-27202308108d.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjA1MTgxMDcsIm5iZiI6MTc2MDUxNzgwNywicGF0aCI6Ii85NTkyNjMyNC8yNzc1MzY1NDktYzk3N2E3MzYtODI4Ny00Y2YwLWEwYTktMjcyMDIzMDgxMDhkLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTEwMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMDE1VDA4NDMyN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI0ZmUwM2FmOTg5ZDI4MTE1ODllOWQ1YzI0NjU3ODlhZjYzYzZlZDUxYjUzYjM3OTYxY2U2MzM1NThiYmFhNDgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.IhWRtCf3Bu3P7BjrOphw36YGmUFdE1ASyOo1CyeG06E"
   },
   {
     title: "XChain Investments",
@@ -70,7 +72,8 @@ export const projects = [
     technologies: ["Cross-chain", "DeFi", "Next.js"],
     link: "https://ethglobal.com/showcase/xchain-investments-4fu2t",
     gradient: "from-purple-900/80 to-blue-900/80",
-    techColor: "purple"
+    techColor: "purple",
+    image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
   },
   {
     title: "AVA AI Agent",
@@ -78,7 +81,8 @@ export const projects = [
     technologies: ["Solidity", "AI", "Multi-chain"],
     link: "https://github.com/kamalbuilds/ava-the-ai-agent",
     gradient: "from-green-900/80 to-blue-900/80",
-    techColor: "green"
+    techColor: "green",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
   },
   {
     title: "Sonic Predict",
@@ -86,7 +90,8 @@ export const projects = [
     technologies: ["TypeScript", "Sonic", "DeFi"],
     link: "https://github.com/kamalbuilds/SonicPredict",
     gradient: "from-pink-900/80 to-indigo-900/80",
-    techColor: "pink"
+    techColor: "pink",
+    image: "https://images.unsplash.com/photo-1642790105077-0a2b40d253d8?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
   },
   {
     title: "NEAR Multichain AI Agent",
@@ -94,7 +99,8 @@ export const projects = [
     technologies: ["TypeScript", "NEAR", "AI"],
     link: "https://github.com/kamalbuilds/near-multichain-ai-agent",
     gradient: "from-blue-900/80 to-cyan-900/80",
-    techColor: "cyan"
+    techColor: "cyan",
+    image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a28?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
   },
   {
     title: "SUI Gas Futures",
@@ -102,7 +108,8 @@ export const projects = [
     technologies: ["TypeScript", "SUI", "Derivatives"],
     link: "https://github.com/kamalbuilds/sui-gas-futures",
     gradient: "from-teal-900/80 to-blue-900/80",
-    techColor: "teal"
+    techColor: "teal",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&crop=center&auto=format&q=80"
   }
 ];
 

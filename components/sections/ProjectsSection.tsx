@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { MotionSection, MotionH2, MotionDiv, fadeIn, staggerContainer, scaleUp, slideInFromLeft } from "./animations";
 import { projects } from "./data";
@@ -50,11 +51,20 @@ export default function ProjectsSection() {
               variants={slideInFromLeft}
               whileHover={{ y: -10, scale: 1.02 }}
             >
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient.replace('/80', '/20')}`}></div>
-                <span className="text-2xl font-bold relative z-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                  {project.title}
-                </span>
+              <div className="h-48 relative overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80`}></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white relative z-10 drop-shadow-lg" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                    {project.title}
+                  </span>
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
