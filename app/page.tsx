@@ -261,15 +261,29 @@ export default function Home() {
       {/* About Section */}
       <MotionSection 
         id="about" 
-        className="py-20 bg-gray-900 text-white"
+        className="relative py-20 bg-black text-white overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
       >
-        <div className="container mx-auto px-6">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-indigo-900/20"></div>
+        <div className="pointer-events-none absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl"></div>
+        <div className="pointer-events-none absolute bottom-1/4 right-1/4 h-80 w-80 rounded-full bg-fuchsia-600/20 blur-3xl"></div>
+        
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-6">
           <MotionH2 
-            className="text-3xl md:text-4xl font-bold mb-10 text-center"
+            className="text-4xl md:text-5xl font-bold mb-10 text-center tracking-tight"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={scaleUp}
           >
             About ChainCrafters
@@ -281,15 +295,33 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <motion.p className="text-lg mb-6" variants={fadeIn}>
-              ChainCrafters is a blockchain development company founded by two experienced developers with a combined 9+ years of blockchain expertise. We specialize in building decentralized applications, smart contracts, and blockchain solutions across multiple chains and protocols.
-            </motion.p>
-            <motion.p className="text-lg mb-6" variants={fadeIn}>
-              With over 60+ hackathon wins between our founders, we bring a proven track record of innovation, technical excellence, and rapid solution delivery to every project.
-            </motion.p>
-            <motion.p className="text-lg" variants={fadeIn}>
-              Our mission is to make blockchain technology accessible and impactful, creating solutions that solve real-world problems and improve users' lives.
-            </motion.p>
+            <motion.div 
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-6"
+              variants={fadeIn}
+              whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
+            >
+              <p className="text-lg leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                ChainCrafters is a blockchain development company founded by two experienced developers with a combined 9+ years of blockchain expertise. We specialize in building decentralized applications, smart contracts, and blockchain solutions across multiple chains and protocols.
+              </p>
+            </motion.div>
+            <motion.div 
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-6"
+              variants={fadeIn}
+              whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
+            >
+              <p className="text-lg leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                With over 60+ hackathon wins between our founders, we bring a proven track record of innovation, technical excellence, and rapid solution delivery to every project.
+              </p>
+            </motion.div>
+            <motion.div 
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+              variants={fadeIn}
+              whileHover={{ y: -5, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
+            >
+              <p className="text-lg leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Our mission is to make blockchain technology accessible and impactful, creating solutions that solve real-world problems and improve users' lives.
+              </p>
+            </motion.div>
           </MotionDiv>
         </div>
       </MotionSection>
@@ -297,15 +329,29 @@ export default function Home() {
       {/* Services Section */}
       <MotionSection 
         id="services" 
-        className="py-20 bg-black text-white"
+        className="relative py-20 bg-black text-white overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
       >
-        <div className="container mx-auto px-6">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-black to-purple-900/20"></div>
+        <div className="pointer-events-none absolute top-1/3 right-1/4 h-72 w-72 rounded-full bg-blue-600/20 blur-3xl"></div>
+        <div className="pointer-events-none absolute bottom-1/3 left-1/4 h-96 w-96 rounded-full bg-purple-600/20 blur-3xl"></div>
+        
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-6">
           <MotionH2 
-            className="text-3xl md:text-4xl font-bold mb-10 text-center"
+            className="text-4xl md:text-5xl font-bold mb-10 text-center tracking-tight"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={scaleUp}
           >
             Our Services
@@ -319,57 +365,57 @@ export default function Home() {
             viewport={{ once: true, amount: 0.1 }}
           >
             <motion.div 
-              className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-blue-500/20 hover:shadow-lg transition-shadow duration-300"
-              whileHover={{ y: -5 }}
+              className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300"
+              whileHover={{ y: -10, scale: 1.02 }}
               variants={fadeIn}
             >
-              <h3 className="text-xl font-bold mb-4">dApp Development</h3>
-              <p>Full-stack development of decentralized applications with beautiful UIs and robust smart contracts.</p>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>dApp Development</h3>
+              <p className="leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Full-stack development of decentralized applications with beautiful UIs and robust smart contracts.</p>
             </motion.div>
             
             <motion.div 
-              className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-blue-500/20 hover:shadow-lg transition-shadow duration-300"
-              whileHover={{ y: -5 }}
+              className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300"
+              whileHover={{ y: -10, scale: 1.02 }}
               variants={fadeIn}
             >
-              <h3 className="text-xl font-bold mb-4">Smart Contract Development</h3>
-              <p>Secure, auditable, and gas-optimized smart contracts across various blockchains including Ethereum, Solana, Avalanche, and more.</p>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Smart Contract Development</h3>
+              <p className="leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Secure, auditable, and gas-optimized smart contracts across various blockchains including Ethereum, Solana, Avalanche, and more.</p>
             </motion.div>
             
             <motion.div 
-              className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-blue-500/20 hover:shadow-lg transition-shadow duration-300"
-              whileHover={{ y: -5 }}
+              className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300"
+              whileHover={{ y: -10, scale: 1.02 }}
               variants={fadeIn}
             >
-              <h3 className="text-xl font-bold mb-4">DeFi Solutions</h3>
-              <p>Development of decentralized finance protocols, from DEXs and lending platforms to yield aggregators.</p>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>DeFi Solutions</h3>
+              <p className="leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Development of decentralized finance protocols, from DEXs and lending platforms to yield aggregators.</p>
             </motion.div>
             
             <motion.div 
-              className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-blue-500/20 hover:shadow-lg transition-shadow duration-300"
-              whileHover={{ y: -5 }}
+              className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300"
+              whileHover={{ y: -10, scale: 1.02 }}
               variants={fadeIn}
             >
-              <h3 className="text-xl font-bold mb-4">Web3 Integration</h3>
-              <p>Seamless integration of web3 functionality into existing applications and platforms.</p>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Web3 Integration</h3>
+              <p className="leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Seamless integration of web3 functionality into existing applications and platforms.</p>
             </motion.div>
             
             <motion.div 
-              className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-blue-500/20 hover:shadow-lg transition-shadow duration-300"
-              whileHover={{ y: -5 }}
+              className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300"
+              whileHover={{ y: -10, scale: 1.02 }}
               variants={fadeIn}
             >
-              <h3 className="text-xl font-bold mb-4">Blockchain Consulting</h3>
-              <p>Expert guidance on blockchain architecture, token economics, and technical strategy.</p>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Blockchain Consulting</h3>
+              <p className="leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Expert guidance on blockchain architecture, token economics, and technical strategy.</p>
             </motion.div>
             
             <motion.div 
-              className="bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-blue-500/20 hover:shadow-lg transition-shadow duration-300"
-              whileHover={{ y: -5 }}
+              className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300"
+              whileHover={{ y: -10, scale: 1.02 }}
               variants={fadeIn}
             >
-              <h3 className="text-xl font-bold mb-4">Custom Blockchain Solutions</h3>
-              <p>Tailor-made blockchain solutions for enterprise needs and specific use cases.</p>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Custom Blockchain Solutions</h3>
+              <p className="leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Tailor-made blockchain solutions for enterprise needs and specific use cases.</p>
             </motion.div>
           </MotionDiv>
         </div>
@@ -378,22 +424,36 @@ export default function Home() {
       {/* Team Section */}
       <MotionSection 
         id="team" 
-        className="py-20 bg-gray-900 text-white"
+        className="relative py-20 bg-black text-white overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
       >
-        <div className="container mx-auto px-6">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-indigo-900/20"></div>
+        <div className="pointer-events-none absolute top-1/4 right-1/3 h-80 w-80 rounded-full bg-fuchsia-600/20 blur-3xl"></div>
+        <div className="pointer-events-none absolute bottom-1/4 left-1/3 h-64 w-64 rounded-full bg-blue-600/20 blur-3xl"></div>
+        
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-6">
           <MotionH2 
-            className="text-3xl md:text-4xl font-bold mb-10 text-center"
+            className="text-4xl md:text-5xl font-bold mb-10 text-center tracking-tight"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={scaleUp}
           >
             Our Team
           </MotionH2>
           
           <MotionDiv 
-            className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -401,12 +461,13 @@ export default function Home() {
           >
             {/* Kamal's Profile */}
             <motion.div 
-              className="flex flex-col items-center"
+              className="flex flex-col items-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideIn}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
               <motion.div 
-                className="w-40 h-40 rounded-full overflow-hidden mb-6 border-2 border-blue-500"
-                whileHover={{ scale: 1.05 }}
+                className="w-40 h-40 rounded-full overflow-hidden mb-6 border-2 border-blue-500 shadow-lg shadow-blue-500/30"
+                whileHover={{ scale: 1.1, rotate: 5 }}
               >
                 <Image 
                   src="https://github.com/kamalbuilds.png" 
@@ -416,66 +477,33 @@ export default function Home() {
                   className="object-cover"
                 />
               </motion.div>
-              <h3 className="text-2xl font-bold mb-2">Kamal Nayan Singh</h3>
-              <p className="text-blue-400 mb-4">Co-Founder & Full Stack Blockchain Developer</p>
-              <p className="text-center mb-4">
+              <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Kamal Nayan Singh</h3>
+              <p className="text-blue-400 mb-4 font-medium">Co-Founder & Full Stack Blockchain Developer</p>
+              <p className="text-center mb-6 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
                 6+ years of blockchain experience. Winner of 50+ global hackathons. Expert in MERN Stack and Rust.
               </p>
               <motion.div 
                 className="flex space-x-4"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.1 }}
               >
-                <a href="https://github.com/kamalbuilds" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+                <a href="https://github.com/kamalbuilds" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition p-2 rounded-lg hover:bg-white/10">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="https://x.com/kamalbuilds" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+                <a href="https://x.com/kamalbuilds" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition p-2 rounded-lg hover:bg-white/10">
                   <Twitter className="w-6 h-6" />
                 </a>
               </motion.div>
             </motion.div>
-            
-            {/* Abhishek's Profile */}
-            <motion.div 
-              className="flex flex-col items-center"
-              variants={slideIn}
-            >
-              <motion.div 
-                className="w-40 h-40 rounded-full overflow-hidden mb-6 border-2 border-blue-500"
-                whileHover={{ scale: 1.05 }}
-              >
-                <Image 
-                  src="https://github.com/abhishek-01k.png" 
-                  alt="Abhishek" 
-                  width={160} 
-                  height={160}
-                  className="object-cover"
-                />
-              </motion.div>
-              <h3 className="text-2xl font-bold mb-2">Abhishek</h3>
-              <p className="text-blue-400 mb-4">Co-Founder & Blockchain Developer</p>
-              <p className="text-center mb-4">
-                4+ years of blockchain experience. SDE at Push Protocol. Winner of 10+ global hackathons.
-              </p>
-              <motion.div 
-                className="flex space-x-4"
-                whileHover={{ scale: 1.05 }}
-              >
-                <a href="https://github.com/abhishek-01k" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
-                  <Github className="w-6 h-6" />
-                </a>
-                <a href="https://twitter.com/abhish_3k" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
-                  <Twitter className="w-6 h-6" />
-                </a>
-              </motion.div>
-            </motion.div>
+                        
               {/* Aarav's Profile */}
             <motion.div 
-              className="flex flex-col items-center"
+              className="flex flex-col items-center bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideIn}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
               <motion.div 
-                className="w-40 h-40 rounded-full overflow-hidden mb-6 border-2 border-blue-500"
-                whileHover={{ scale: 1.05 }}
+                className="w-40 h-40 rounded-full overflow-hidden mb-6 border-2 border-blue-500 shadow-lg shadow-blue-500/30"
+                whileHover={{ scale: 1.1, rotate: 5 }}
               >
                 <Image 
                   src="https://pbs.twimg.com/profile_images/1960740396612431877/UyU7Y-c1_400x400.jpg" 
@@ -485,19 +513,19 @@ export default function Home() {
                   className="object-cover"
                 />
               </motion.div>
-              <h3 className="text-2xl font-bold mb-2">Aarav raj</h3>
-              <p className="text-blue-400 mb-4">Full stack Blockchain Developer</p>
-              <p className="text-center mb-4">
+              <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Aarav raj</h3>
+              <p className="text-blue-400 mb-4 font-medium">Full stack Blockchain Developer</p>
+              <p className="text-center mb-6 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
                 3+ years of blockchain experience, Winner of 10+ global hackathons.
               </p>
               <motion.div 
                 className="flex space-x-4"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.1 }}
               >
-                <a href="https://github.com/aarav1656/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+                <a href="https://github.com/aarav1656/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition p-2 rounded-lg hover:bg-white/10">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="http://x.com/aarav1656/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+                <a href="http://x.com/aarav1656/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition p-2 rounded-lg hover:bg-white/10">
                   <Twitter className="w-6 h-6" />
                 </a>
               </motion.div>
@@ -509,15 +537,29 @@ export default function Home() {
       {/* Projects Section */}
       <MotionSection 
         id="projects" 
-        className="py-20 bg-black text-white"
+        className="relative py-20 bg-black text-white overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
       >
-        <div className="container mx-auto px-6">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-black to-purple-900/20"></div>
+        <div className="pointer-events-none absolute top-1/3 left-1/4 h-96 w-96 rounded-full bg-purple-600/20 blur-3xl"></div>
+        <div className="pointer-events-none absolute bottom-1/3 right-1/4 h-80 w-80 rounded-full bg-blue-600/20 blur-3xl"></div>
+        
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-6">
           <MotionH2 
-            className="text-3xl md:text-4xl font-bold mb-10 text-center"
+            className="text-4xl md:text-5xl font-bold mb-10 text-center tracking-tight"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={scaleUp}
           >
             Our Projects
@@ -532,196 +574,203 @@ export default function Home() {
           >
             {/* TradeSphere */}
             <motion.div 
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideInFromLeft}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
-              <div className="h-48 bg-gradient-to-br from-blue-900 to-indigo-900 flex items-center justify-center">
-                <span className="text-2xl font-bold">TradeSphere</span>
+              <div className="h-48 bg-gradient-to-br from-blue-900/80 to-indigo-900/80 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+                <span className="text-2xl font-bold relative z-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>TradeSphere</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">TradeSphere</h3>
-                <p className="mb-4">A decentralized trading platform that enables cross-chain asset trading with enhanced liquidity.</p>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>TradeSphere</h3>
+                <p className="mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>A decentralized trading platform that enables cross-chain asset trading with enhanced liquidity.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Ethereum</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">React</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Solidity</span>
+                  <span className="bg-blue-600/20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-500/30">Ethereum</span>
+                  <span className="bg-blue-600/20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-500/30">React</span>
+                  <span className="bg-blue-600/20 text-blue-300 text-xs px-3 py-1 rounded-full border border-blue-500/30">Solidity</span>
                 </div>
                 <a 
                   href="https://ethglobal.com/showcase/tradesphere-5vdrw" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-blue-400 hover:text-blue-300 transition"
+                  className="text-blue-400 hover:text-blue-300 transition font-medium inline-flex items-center gap-2"
                 >
-                  View Project →
+                  View Project <span>→</span>
                 </a>
               </div>
             </motion.div>
             
             {/* Gas Protocol */}
             <motion.div 
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideInFromLeft}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
-              <div className="h-48 bg-gradient-to-br from-indigo-900 to-purple-900 flex items-center justify-center">
-                <span className="text-2xl font-bold">Gas Protocol</span>
+              <div className="h-48 bg-gradient-to-br from-indigo-900/80 to-purple-900/80 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-indigo-600/20"></div>
+                <span className="text-2xl font-bold relative z-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Gas Protocol</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Gas Protocol</h3>
-                <p className="mb-4">Unlocking gasless on-chain transactions for new Web3 users using Safe AA and GelatoRelaySDK.</p>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Gas Protocol</h3>
+                <p className="mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Unlocking gasless on-chain transactions for new Web3 users using Safe AA and GelatoRelaySDK.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Account Abstraction</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Web3</span>
+                  <span className="bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30">TypeScript</span>
+                  <span className="bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30">Account Abstraction</span>
+                  <span className="bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30">Web3</span>
                 </div>
                 <a 
                   href="https://ethglobal.com/showcase/gas-protocol-46m74" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-blue-400 hover:text-blue-300 transition"
+                  className="text-blue-400 hover:text-blue-300 transition font-medium inline-flex items-center gap-2"
                 >
-                  View Project →
+                  View Project <span>→</span>
                 </a>
               </div>
             </motion.div>
             
             {/* XChain Investments */}
             <motion.div 
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideInFromLeft}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
-              <div className="h-48 bg-gradient-to-br from-purple-900 to-blue-900 flex items-center justify-center">
-                <span className="text-2xl font-bold">XChain Investments</span>
+              <div className="h-48 bg-gradient-to-br from-purple-900/80 to-blue-900/80 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20"></div>
+                <span className="text-2xl font-bold relative z-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>XChain Investments</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">XChain Investments</h3>
-                <p className="mb-4">Cross-chain investment platform enabling seamless asset management across multiple blockchains.</p>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>XChain Investments</h3>
+                <p className="mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Cross-chain investment platform enabling seamless asset management across multiple blockchains.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Cross-chain</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">DeFi</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Next.js</span>
+                  <span className="bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30">Cross-chain</span>
+                  <span className="bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30">DeFi</span>
+                  <span className="bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30">Next.js</span>
                 </div>
                 <a 
                   href="https://ethglobal.com/showcase/xchain-investments-4fu2t" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-blue-400 hover:text-blue-300 transition"
+                  className="text-blue-400 hover:text-blue-300 transition font-medium inline-flex items-center gap-2"
                 >
-                  View Project →
+                  View Project <span>→</span>
                 </a>
               </div>
             </motion.div>
 
             {/* AVA AI Agent */}
             <motion.div 
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideInFromLeft}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
-              <div className="h-48 bg-gradient-to-br from-green-900 to-blue-900 flex items-center justify-center">
-                <span className="text-2xl font-bold">AVA AI Agent</span>
+              <div className="h-48 bg-gradient-to-br from-green-900/80 to-blue-900/80 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-blue-600/20"></div>
+                <span className="text-2xl font-bold relative z-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>AVA AI Agent</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">AVA AI Agent</h3>
-                <p className="mb-4">Multi-chain AI agent supporting Base, Mantle, Sui, and Arbitrum networks.</p>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>AVA AI Agent</h3>
+                <p className="mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Multi-chain AI agent supporting Base, Mantle, Sui, and Arbitrum networks.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Solidity</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">AI</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Multi-chain</span>
+                  <span className="bg-green-600/20 text-green-300 text-xs px-3 py-1 rounded-full border border-green-500/30">Solidity</span>
+                  <span className="bg-green-600/20 text-green-300 text-xs px-3 py-1 rounded-full border border-green-500/30">AI</span>
+                  <span className="bg-green-600/20 text-green-300 text-xs px-3 py-1 rounded-full border border-green-500/30">Multi-chain</span>
                 </div>
                 <a 
                   href="https://github.com/kamalbuilds/ava-the-ai-agent" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-blue-400 hover:text-blue-300 transition"
+                  className="text-blue-400 hover:text-blue-300 transition font-medium inline-flex items-center gap-2"
                 >
-                  View Project →
+                  View Project <span>→</span>
                 </a>
               </div>
             </motion.div>
 
             {/* Sonic Predict */}
             <motion.div 
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideInFromLeft}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
-              <div className="h-48 bg-gradient-to-br from-pink-900 to-indigo-900 flex items-center justify-center">
-                <span className="text-2xl font-bold">Sonic Predict</span>
+              <div className="h-48 bg-gradient-to-br from-pink-900/80 to-indigo-900/80 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-indigo-600/20"></div>
+                <span className="text-2xl font-bold relative z-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Sonic Predict</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Sonic Predict</h3>
-                <p className="mb-4">Prediction market platform built on Sonic protocols enabling decentralized forecasting.</p>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>Sonic Predict</h3>
+                <p className="mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Prediction market platform built on Sonic protocols enabling decentralized forecasting.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Sonic</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">DeFi</span>
+                  <span className="bg-pink-600/20 text-pink-300 text-xs px-3 py-1 rounded-full border border-pink-500/30">TypeScript</span>
+                  <span className="bg-pink-600/20 text-pink-300 text-xs px-3 py-1 rounded-full border border-pink-500/30">Sonic</span>
+                  <span className="bg-pink-600/20 text-pink-300 text-xs px-3 py-1 rounded-full border border-pink-500/30">DeFi</span>
                 </div>
                 <a 
                   href="https://github.com/kamalbuilds/SonicPredict" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-blue-400 hover:text-blue-300 transition"
+                  className="text-blue-400 hover:text-blue-300 transition font-medium inline-flex items-center gap-2"
                 >
-                  View Project →
+                  View Project <span>→</span>
                 </a>
               </div>
             </motion.div>
 
             {/* NEAR Multichain AI Agent */}
             <motion.div 
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideInFromLeft}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
-              <div className="h-48 bg-gradient-to-br from-blue-900 to-cyan-900 flex items-center justify-center">
-                <span className="text-2xl font-bold">NEAR Multichain AI</span>
+              <div className="h-48 bg-gradient-to-br from-blue-900/80 to-cyan-900/80 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20"></div>
+                <span className="text-2xl font-bold relative z-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>NEAR Multichain AI</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">NEAR Multichain AI Agent</h3>
-                <p className="mb-4">AI-powered agent for NEAR Protocol with cross-chain capabilities.</p>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>NEAR Multichain AI Agent</h3>
+                <p className="mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>AI-powered agent for NEAR Protocol with cross-chain capabilities.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">NEAR</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">AI</span>
+                  <span className="bg-cyan-600/20 text-cyan-300 text-xs px-3 py-1 rounded-full border border-cyan-500/30">TypeScript</span>
+                  <span className="bg-cyan-600/20 text-cyan-300 text-xs px-3 py-1 rounded-full border border-cyan-500/30">NEAR</span>
+                  <span className="bg-cyan-600/20 text-cyan-300 text-xs px-3 py-1 rounded-full border border-cyan-500/30">AI</span>
                 </div>
                 <a 
                   href="https://github.com/kamalbuilds/near-multichain-ai-agent" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-blue-400 hover:text-blue-300 transition"
+                  className="text-blue-400 hover:text-blue-300 transition font-medium inline-flex items-center gap-2"
                 >
-                  View Project →
+                  View Project <span>→</span>
                 </a>
               </div>
             </motion.div>
 
             {/* SUI Gas Futures */}
             <motion.div 
-              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300"
               variants={slideInFromLeft}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
-              <div className="h-48 bg-gradient-to-br from-teal-900 to-blue-900 flex items-center justify-center">
-                <span className="text-2xl font-bold">SUI Gas Futures</span>
+              <div className="h-48 bg-gradient-to-br from-teal-900/80 to-blue-900/80 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-600/20 to-blue-600/20"></div>
+                <span className="text-2xl font-bold relative z-10" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>SUI Gas Futures</span>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">SUI Gas Futures</h3>
-                <p className="mb-4">Derivative contracts for SUI blockchain gas prices, enabling hedging against volatility.</p>
+                <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>SUI Gas Futures</h3>
+                <p className="mb-4 leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>Derivative contracts for SUI blockchain gas prices, enabling hedging against volatility.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">TypeScript</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">SUI</span>
-                  <span className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded">Derivatives</span>
+                  <span className="bg-teal-600/20 text-teal-300 text-xs px-3 py-1 rounded-full border border-teal-500/30">TypeScript</span>
+                  <span className="bg-teal-600/20 text-teal-300 text-xs px-3 py-1 rounded-full border border-teal-500/30">SUI</span>
+                  <span className="bg-teal-600/20 text-teal-300 text-xs px-3 py-1 rounded-full border border-teal-500/30">Derivatives</span>
                 </div>
                 <a 
                   href="https://github.com/kamalbuilds/sui-gas-futures" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-blue-400 hover:text-blue-300 transition"
+                  className="text-blue-400 hover:text-blue-300 transition font-medium inline-flex items-center gap-2"
                 >
-                  View Project →
+                  View Project <span>→</span>
                 </a>
               </div>
             </motion.div>
@@ -746,25 +795,39 @@ export default function Home() {
       {/* Contact Section */}
       <MotionSection 
         id="contact" 
-        className="py-20 bg-gray-900 text-white"
+        className="relative py-20 bg-black text-white overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeIn}
       >
-        <div className="container mx-auto px-6">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-indigo-900/20"></div>
+        <div className="pointer-events-none absolute top-1/4 left-1/3 h-80 w-80 rounded-full bg-fuchsia-600/20 blur-3xl"></div>
+        <div className="pointer-events-none absolute bottom-1/4 right-1/3 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl"></div>
+        
+        {/* Animated Grid Background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)',
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-6">
           <MotionH2 
-            className="text-3xl md:text-4xl font-bold mb-10 text-center"
+            className="text-4xl md:text-5xl font-bold mb-10 text-center tracking-tight"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={scaleUp}
           >
             Get In Touch
           </MotionH2>
           
           <MotionDiv 
-            className="max-w-2xl mx-auto bg-gray-800 rounded-lg shadow-md p-8"
+            className="max-w-2xl mx-auto bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8"
             variants={fadeIn}
           >
-            <p className="text-center mb-8">
+            <p className="text-center mb-8 text-lg leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
               Interested in working with us? We'd love to hear from you. Reach out to discuss your project needs.
             </p>
             
@@ -777,58 +840,63 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <motion.div variants={slideIn}>
-                  <label htmlFor="name" className="block mb-2 font-medium">
+                  <label htmlFor="name" className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Name
                   </label>
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 border border-gray-700 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-3 border border-white/20 bg-white/5 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
                     placeholder="Your name"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   />
                 </motion.div>
                 <motion.div variants={slideIn}>
-                  <label htmlFor="email" className="block mb-2 font-medium">
+                  <label htmlFor="email" className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Email
                   </label>
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border border-gray-700 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-3 border border-white/20 bg-white/5 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
                     placeholder="Your email"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   />
                 </motion.div>
               </MotionDiv>
               
               <motion.div variants={slideIn}>
-                <label htmlFor="subject" className="block mb-2 font-medium">
+                <label htmlFor="subject" className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
                   Subject
                 </label>
                 <input
                   type="text"
                   id="subject"
-                  className="w-full px-4 py-2 border border-gray-700 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-3 border border-white/20 bg-white/5 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
                   placeholder="Subject"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 />
               </motion.div>
               
               <motion.div variants={slideIn}>
-                <label htmlFor="message" className="block mb-2 font-medium">
+                <label htmlFor="message" className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-2 border border-gray-700 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-3 border border-white/20 bg-white/5 text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"
                   placeholder="Your message"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 ></textarea>
               </motion.div>
               
               <MotionButton
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-md transition"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 rounded-xl transition shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Send Message
               </MotionButton>
@@ -838,12 +906,17 @@ export default function Home() {
       </MotionSection>
       
       {/* Footer */}
-      <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-6">
+      <footer className="relative bg-black text-white py-12 overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent"></div>
+        <div className="pointer-events-none absolute top-0 left-1/4 h-32 w-32 rounded-full bg-purple-600/20 blur-2xl"></div>
+        <div className="pointer-events-none absolute top-0 right-1/4 h-40 w-40 rounded-full bg-blue-600/20 blur-2xl"></div>
+        
+        <div className="relative z-10 container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <h2 className="text-2xl font-bold">ChainCrafters</h2>
-              <p className="mt-2">Building blockchain solutions that matter</p>
+              <h2 className="text-3xl font-bold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>ChainCrafters</h2>
+              <p className="mt-2 text-gray-300" style={{ fontFamily: "'Inter', sans-serif" }}>Building blockchain solutions that matter</p>
             </div>
             
             <div className="flex space-x-6">
@@ -851,7 +924,7 @@ export default function Home() {
                 href="https://github.com/kamalbuilds" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-blue-400 transition"
+                className="hover:text-blue-400 transition p-3 rounded-xl hover:bg-white/10"
                 whileHover={{ scale: 1.2, rotate: 5 }}
               >
                 <Github className="w-6 h-6" />
@@ -860,7 +933,7 @@ export default function Home() {
                 href="https://twitter.com/0xkamal7" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="hover:text-blue-400 transition"
+                className="hover:text-blue-400 transition p-3 rounded-xl hover:bg-white/10"
                 whileHover={{ scale: 1.2, rotate: -5 }}
               >
                 <Twitter className="w-6 h-6" />
@@ -868,12 +941,12 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; {new Date().getFullYear()} ChainCrafters. All rights reserved.</p>
+          <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400" style={{ fontFamily: "'Inter', sans-serif" }}>&copy; {new Date().getFullYear()} ChainCrafters. All rights reserved.</p>
             
             <div className="mt-4 md:mt-0 flex space-x-6">
-              <a href="#" className="hover:text-blue-400 transition">Privacy Policy</a>
-              <a href="#" className="hover:text-blue-400 transition">Terms of Service</a>
+              <a href="#" className="hover:text-blue-400 transition text-gray-400 hover:text-white" style={{ fontFamily: "'Inter', sans-serif" }}>Privacy Policy</a>
+              <a href="#" className="hover:text-blue-400 transition text-gray-400 hover:text-white" style={{ fontFamily: "'Inter', sans-serif" }}>Terms of Service</a>
             </div>
           </div>
         </div>
